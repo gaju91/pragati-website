@@ -1,32 +1,98 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" /> 
-    <link rel="icon" type="image/svg+xml" href="/icons/favicon.ico">
-
-    <link rel="apple-touch-icon" sizes="57x57" href="/icons/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="/icons/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/icons/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="/icons/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/icons/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/icons/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/icons/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/icons/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="/icons/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="/icons/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
-    <link rel="manifest" href="manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
-
+    <!-- Basic Meta -->
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pragati Digital</title>
+    <meta name="description" content="Pragati Digital offers expert website development, mobile app creation, and software engineering services tailored to transform your business." />
+    <meta name="author" content="Pragati Digital" />
+    <meta name="robots" content="index, follow" />
+    <meta name="keywords" content="website development, mobile apps, software engineering, digital solutions, Pragati Digital, software solutions, business growth" />
+
+    <!-- Title -->
+    <title>Pragati Digital | Websites, Mobile Apps & Software Engineering</title>
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Pragati Digital | Websites, Mobile Apps & Software Engineering" />
+    <meta property="og:description" content="Transform your business with Pragati Digital. We specialize in websites, mobile apps, and software engineering solutions tailored for success." />
+    <meta property="og:url" content="https://www.pragatidigital.com" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://www.pragatidigital.com/og/pragati_og_banner.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Pragati Digital | Websites, Mobile Apps & Software Engineering" />
+    <meta name="twitter:description" content="Discover Pragati Digital's website development, mobile apps, and software engineering solutions." />
+    <meta name="twitter:image" content="https://www.pragatidigital.com/og/pragati_og_banner.jpg" />
+    <meta name="twitter:site" content="@const_gaju91" />
+
+    <!-- Canonical Link -->
+    <link rel="canonical" href="https://www.pragatidigital.com" />
+
+    <!-- Favicons -->
+    <link rel="icon" href="/icons/favicon.ico" type="image/x-icon" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/icons/android-icon-192x192.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/icons/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-icon-180x180.png" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="/icons/ms-icon-144x144.png" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <!-- Preconnect for Fonts and Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet" />
+
+    <!-- Sitemap -->
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="/styles/main.css" />
+
+    <!-- Robots.txt -->
+    <meta name="robots" content="index, follow" />
+
+    <!-- Internal Linking -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const navLinks = document.querySelectorAll('a[href^="#"]');
+        navLinks.forEach((link) => {
+          link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const targetId = link.getAttribute('href').substring(1);
+            document.getElementById(targetId).scrollIntoView({
+              behavior: 'smooth',
+              block: 'start',
+            });
+          });
+        });
+      });
+    </script>
   </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    <footer style="position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden;">
+      <p>© 2025 Pragati Digital. All rights reserved.</p>
+      <p>
+        <a href="/">Home</a> |
+        <a href="/portfolio">Portfolio</a> | 
+        <a href="/contact">Contact Us</a>
+      </p>
+      
+      <!-- Visually Hidden Social Links for SEO -->        <p>Follow us on:</p>
+        <a href="https://twitter.com/const_gaju91" target="_blank" rel="noopener noreferrer">Twitter</a>
+        <a href="https://www.linkedin.com/in/gajuhere/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://www.facebook.com/gajanand.bhardwaz/" target="_blank" rel="noopener noreferrer">Facebook</a>
+        <a href="https://instagram.com/pragatidigital.life" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://wa.me/919875763585" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+      </div>
+    </footer>
+    
   </body>
+  <script type="module" src="/src/main.tsx"></script>
 </html>
