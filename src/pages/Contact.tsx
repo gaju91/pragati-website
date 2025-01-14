@@ -204,7 +204,7 @@ export default function Contact() {
                 <div>
                   <h3 className="text-lg font-medium text-white">Email</h3>
                   <a href="mailto:hello@pragatidigital.com" className="text-gray-400 hover:text-white transition-colors">
-                    business@pragatidigital.com
+                    gajanand742@gmail.com
                   </a>
                 </div>
               </div>
@@ -216,23 +216,6 @@ export default function Contact() {
                   <h3 className="text-lg font-medium text-white">Phone</h3>
                   <a href="tel:+919875763585" className="text-gray-400 hover:text-white transition-colors">
                     +91 9875763585
-                  </a>
-                </div>
-              </div>
-              <div className="flex items-start space-x-4 group">
-                <div className="p-3 rounded-lg bg-white/5 border border-white/10 group-hover:bg-white/10 transition-colors">
-                  <MapPin className="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <h3 className="text-lg font-medium text-white">Location</h3>
-                  <a 
-                    href="https://maps.google.com" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="text-gray-400 hover:text-white transition-colors"
-                  >
-                    <p>Mittal Mall</p>
-                    <p>Ajmer Rajasthan, India 305001</p>
                   </a>
                 </div>
               </div>
