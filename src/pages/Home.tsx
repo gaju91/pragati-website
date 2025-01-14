@@ -23,7 +23,7 @@ export default function Home() {
             <div className="inline-flex items-center space-x-2 bg-white/5 rounded-full px-3 py-1 mb-6 border border-white/10">
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-white"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-lime-500"></span>
               </span>
               <span className="text-white/80 text-sm">Now accepting new projects</span>
             </div>
