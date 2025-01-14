@@ -1,14 +1,9 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import Home from './pages/Home';
 import Portfolio from './pages/Portfolio';
 import Contact from './pages/Contact';
-import Login from './pages/admin/Login';
-import Dashboard from './pages/admin/Dashboard';
-import AdminCarousel from './pages/admin/Carousel';
-import AdminProjects from './pages/admin/Projects';
-import { AuthProvider } from './lib/AuthProvider';
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -87,25 +82,37 @@ function Navbar() {
 
 function App() {
   return (
-    <AuthProvider>
-      <Router>
-        <Routes>
-          {/* Public routes */}
-          <Route path="/" element={<><Navbar /><Home /></>} />
-          <Route path="/portfolio" element={<><Navbar /><Portfolio /></>} />
-          <Route path="/contact" element={<><Navbar /><Contact /></>} />
-          
-          {/* Admin routes */}
-          <Route path="/admin/login" element={<Login />} />
-          <Route path="/admin/*" element={<Dashboard />}>
-            <Route index element={<Navigate to="dashboard" replace />} />
-            <Route path="dashboard" element={<div className="text-white">Welcome to the dashboard</div>} />
-            <Route path="carousel" element={<AdminCarousel />} />
-            <Route path="projects" element={<AdminProjects />} />
-          </Route>
-        </Routes>
-      </Router>
-    </AuthProvider>
+    <Router>
+      <Routes>
+        {/* Public routes */}
+        <Route
+          path="/"
+          element={
+            <>
+              <Navbar />
+              <Home />
+            </>
+          }
+        />
+        <Route
+          path="/portfolio"
+          element={
+            <>
+              <Navbar />
+              <Portfolio />
+            </>
+          }
+        />
+        <Route
+          path="/contact"
+          element={
+            <><Navbar />
+              <Contact />
+            </>
+          }
+        />
+      </Routes>
+    </Router>
   );
 }
 

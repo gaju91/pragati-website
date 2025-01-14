@@ -1,5 +1,3 @@
-import { supabase } from './supabase';
-
 export const sampleProjects = [
   {
     title: "School Wesbite For SVMB",
@@ -38,14 +36,3 @@ export const sampleProjects = [
     order: 3
   }
 ];
-
-export async function insertSampleProjects() {
-  const { error } = await supabase
-    .from('projects')
-    .insert(sampleProjects);
-  
-  if (error) {
-    console.error('Error inserting sample projects:', error);
-    throw error;
-  }
-}
