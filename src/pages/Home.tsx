@@ -52,11 +52,15 @@ export default function Home() {
             {/* Stats */}
             <div className="mt-20 grid grid-cols-1 sm:grid-cols-3 gap-8 border-t border-white/5 pt-12">
               <div className="text-center">
-                <div className="text-4xl font-bold text-white mb-2">100+</div>
-                <div className="text-gray-400">Projects Delivered</div>
+                <div className="text-4xl font-bold text-white mb-2">50+</div>
+                <div className="text-gray-400">Projects Delivered </div>
+                  <br />
+                  <div className="text-gray-400">*1 As Agency</div>
+                  <div className="text-gray-400">*50+ As Consultant</div>
+
               </div>
               <div className="text-center">
-                <div className="text-4xl font-bold text-white mb-2">95%</div>
+                <div className="text-4xl font-bold text-white mb-2">100%</div>
                 <div className="text-gray-400">Client Satisfaction</div>
               </div>
               <div className="text-center">

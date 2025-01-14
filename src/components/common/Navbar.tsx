@@ -10,7 +10,7 @@ function Navbar() {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50">
-      {/* Crystal background with enhanced effects - removed border */}
+      {/* Crystal background with enhanced effects */}
       <div className="absolute inset-0 bg-black backdrop-blur-xl">
         <div className="absolute inset-0 overflow-hidden">
           {/* Multiple layered gradients for depth */}
@@ -22,14 +22,20 @@ function Navbar() {
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Rest of the navbar content remains the same */}
+        {/* Navbar Content */}
         <div className="flex justify-between items-center h-16">
-          {/* Logo */}
+          {/* Logo and Company Name */}
           <div className="flex items-center">
-            <Link 
-              to="/" 
-              className="text-white font-bold text-xl relative group"
+            <Link
+              to="/"
+              className="flex items-center text-white font-bold text-xl relative group"
             >
+              {/* Logo */}
+              <img
+                src="/logo/logo.png"
+                alt="Company Logo"
+                className="w-12 h-13 mr-2" // Adjust the width and height to fit your design
+              />
               <span className="relative z-10 group-hover:text-shadow-glow transition-all duration-300">
                 Pragati Digital
               </span>
@@ -42,39 +48,29 @@ function Navbar() {
             {[
               { path: '/', label: 'Home' },
               { path: '/portfolio', label: 'Portfolio' },
-              { path: '/contact', label: 'Contact' }
+              { path: '/contact', label: 'Contact' },
             ].map(({ path, label }) => (
               <Link
                 key={path}
                 to={path}
                 className={`relative group px-6 py-2 text-white font-medium transition-all duration-300
                            overflow-hidden rounded-lg ${
-                             isActive(path) 
-                               ? 'bg-white/10 shadow-[0_0_15px_rgba(255,255,255,0.1)]' 
+                             isActive(path)
+                               ? 'bg-white/10 shadow-[0_0_15px_rgba(255,255,255,0.1)]'
                                : 'bg-white/5 hover:bg-white/10'
                            }`}
               >
                 {/* Button background effects */}
                 <div className="absolute inset-0 border border-white/10 group-hover:border-white/20 rounded-lg transition-colors duration-300"></div>
                 <div className="absolute inset-[1px] rounded-lg bg-black/20 backdrop-blur-sm"></div>
-                
-                {/* Shine effect */}
                 <div className="absolute inset-0 translate-x-[-100%] group-hover:translate-x-[100%] 
-                              bg-gradient-to-r from-transparent via-white/10 to-transparent duration-1000 ease-out">
-                </div>
-                
-                {/* Text with glow effect */}
+                              bg-gradient-to-r from-transparent via-white/10 to-transparent duration-1000 ease-out"></div>
                 <span className="relative z-10 group-hover:text-shadow-glow">{label}</span>
-                
-                {/* Active indicator */}
-                {isActive(path) && (
-                  <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-white/20 shadow-[0_0_8px_rgba(255,255,255,0.5)]"></div>
-                )}
               </Link>
             ))}
           </div>
 
-          {/* Mobile menu button */}
+          {/* Mobile Menu Button */}
           <div className="md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -82,11 +78,7 @@ function Navbar() {
                          bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20
                          transition-all duration-300 hover:shadow-[0_0_15px_rgba(255,255,255,0.1)]"
             >
-              {isMenuOpen ? (
-                <X className="h-6 w-6" />
-              ) : (
-                <Menu className="h-6 w-6" />
-              )}
+              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
           </div>
         </div>
@@ -97,7 +89,7 @@ function Navbar() {
             {[
               { path: '/', label: 'Home' },
               { path: '/portfolio', label: 'Portfolio' },
-              { path: '/contact', label: 'Contact' }
+              { path: '/contact', label: 'Contact' },
             ].map(({ path, label }) => (
               <Link
                 key={path}
